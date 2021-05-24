@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>   
+<meta charset="UTF-8" />   
+<meta http-equiv="X-UA-Compatible"content="IE=edge" />   
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />   
+<title>Covid</title> 
+<LINK rel="stylesheet"
+         type="text/css" 
+         href="projekti2.css">
+</head> 
+
+
+
+<script>   function haeTiedot() {     
+let url = "https://api.covid19api.com/dayone/country/finland/status/confirmed";      
+var xmlhttp = new XMLHttpRequest();     
+xmlhttp.open("GET", url, true);     xmlhttp.send();       
+   
+xmlhttp.onreadystatechange = function () {       
+if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {         
+let data = JSON.parse(xmlhttp.responseText);         
+console.log(); 
+   document.write(data[0].Cases);
+document.write(data[0].Country);
+   document.write(data[0].Date);
+document.write(data[0].Status);     
+//document.write(JSON.parse(xmlhttp.responseText));        
+}      
+};    
+} 
+</script>  
+
+<script>   function haeTiedot2() {     
+let url = "https://api.covid19api.com/dayone/country/sweden/status/confirmed";      
+var xmlhttp = new XMLHttpRequest();     
+xmlhttp.open("GET", url, true);     xmlhttp.send();       
+    
+xmlhttp.onreadystatechange = function () {       
+if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {         
+let data = JSON.parse(xmlhttp.responseText);         
+console.log();  
+  document.write(data[0].Cases);
+document.write(data[0].Country);
+   document.write(data[0].Date);
+document.write(data[0].Status);
+//document.write(JSON.parse(xmlhttp.responseText));        
+}      
+};    
+} 
+</script>  
+
+<script>   function haeTiedot3() {     
+let url = "https://api.covid19api.com/dayone/country/norway/status/confirmed";      
+var xmlhttp = new XMLHttpRequest();     
+xmlhttp.open("GET", url, true);     xmlhttp.send();       
+   
+xmlhttp.onreadystatechange = function () {       
+if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {         
+let data = JSON.parse(xmlhttp.responseText);         
+console.log();  
+   document.write(data[0].Cases);
+document.write(data[0].Country);
+   document.write(data[0].Date);
+document.write(data[0].Status);    
+//document.write(JSON.parse(xmlhttp.responseText));        
+}      
+};    
+} 
+</script>
+
+
+
+<body>  
+
+
+<div id="otsikko"> COVID
+</div>
+<h1>Check your country's covid cases</h1>
+  
+<div id="data"> Finland
+<button onclick="haeTiedot()">Paina</button> 
+
+</div> 
+
+<div id="data2"> Sweden
+<button onclick="haeTiedot2()">Paina</button> 
+</div> 
+
+<div id="data3"> norway
+<button onclick="haeTiedot3()">Paina</button> 
+</div> 
+</body>
+<footer>Tekijä Tiia Raveala
+</footer>
+</html>

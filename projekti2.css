@@ -1,0 +1,32 @@
+/*tyyli otsikolle, teemaan sopiva punainen*/
+#otsikko{
+	font-size: 50px;
+  text-align: center;
+  padding: 3px;
+  background-color: red;
+  color: white;
+  margin-top: 20px;
+}
+/*tyyli otsikolle, teemaan sopiva punainen*/
+h1{
+	color: red;
+	font-size: 30px;
+}
+/*tehdään vähän välejä selkeämmän tyylin vuoksi*/
+#data{
+	margin-top: 20px;
+}
+#data2{
+	margin-top: 20px;
+}
+#data3{
+	margin-top: 20px;
+}
+/*footerille sama tyyli kuin otsikolle*/
+footer{
+  text-align: center;
+  padding: 3px;
+  background-color: red;
+  color: white;
+  margin-top: 20px;
+}
